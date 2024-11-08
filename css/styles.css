@@ -8,11 +8,29 @@ body {
   padding: 20px;
   border: 1px solid #ccc;
   background-color: #f8f8f8;
+  
 }
+
+.genero {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 
 h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
+}
+
+img {
+  width: 300px;
+  gap: 80px;
+  
+}
+
+p {
+  text-align: center;
+  overflow: auto;
 }
 
 
