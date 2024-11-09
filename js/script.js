@@ -1,8 +1,5 @@
 import peliculas from './peliculas.js'
 
-//1-Tengo que determinar en cada genre_ids las categorías que incluye
-//Hacer constantes con el id de las categorías. 
-//2- Usar filter().
 
 const genderContainer = document.querySelectorAll('.genero-container');
 const divAction = document.getElementById('genero-28');
@@ -31,12 +28,12 @@ function movieFilter(ids) {
 }
 
 
-function moviesSelected(id, div) {
+function moviesSelection(id, div) {
     movieFilter(id);
-    const actionMovies = movies;
-    const actionCovers = covers;
+    const moviesSelected = movies;
+    const moviesCovers = covers;
     
-    for (let i = 0; i < actionMovies.length; i++) {
+    for (let i = 0; i < moviesSelected.length; i++) {
         const movieTitle= document.createElement('p');
         const movieCover = document.createElement('img');
         const movieDiv = document.createElement('div');
@@ -45,16 +42,17 @@ function moviesSelected(id, div) {
         movieDiv.appendChild(movieTitle);
         movieDiv.appendChild(movieCover);
        
-        movieTitle.textContent = actionMovies[i];
-        movieCover.src = actionCovers[i];
-        movieCover.alt = 'Portada de la película ' + actionMovies[i];
+        movieTitle.textContent = moviesSelected[i];
+        movieCover.src = moviesCovers[i];
+        movieCover.alt = 'Portada de la película "' + moviesSelected[i] + '"';
+        //console.log(movieCover.alt)
     }
 }
 
 
-moviesSelected(actionId, divAction);
-moviesSelected(thrillerId, divThriller);
-moviesSelected(adventureID, divAdventure);
+moviesSelection(actionId, divAction);
+moviesSelection(thrillerId, divThriller);
+moviesSelection(adventureID, divAdventure);
 
 
 // for (let i = 0; i < peliculas.length; i++) {
