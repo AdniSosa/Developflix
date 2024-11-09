@@ -55,19 +55,4 @@ moviesSelection(thrillerId, divThriller);
 moviesSelection(adventureID, divAdventure);
 
 
-// for (let i = 0; i < peliculas.length; i++) {
-//     for(let j = 0; j < peliculas[i].genre_ids.length; j++) {
-//         if (peliculas[i].genre_ids[j] === 53) {
-//         const thrillerMovies = peliculas[i].original_title;
-//         }
-//     }
-// }
-
-// for (let i = 0; i < peliculas.length; i++) {
-//     for(let j = 0; j < peliculas[i].genre_ids.length; j++) {
-//         if (peliculas[i].genre_ids[j] === 12) {
-//         const AdMovies = peliculas[i].original_title;
-//         }
-//     }
-// }
 
