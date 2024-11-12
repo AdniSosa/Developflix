@@ -1,7 +1,6 @@
 import peliculas from './peliculas.js'
 
 
-const genderContainer = document.querySelectorAll('.genero-container');
 const divAction = document.getElementById('genero-28');
 const divThriller = document.getElementById('genero-53');
 const divAdventure = document.getElementById('genero-12');
@@ -18,7 +17,7 @@ function movieFilter(ids) {
         for(let j = 0; j < peliculas[i].genre_ids.length; j++) {
             if (peliculas[i].genre_ids[j] === ids) {
             const movie = peliculas[i].original_title;
-            const cover = imagePath + peliculas[i].backdrop_path;
+            const cover = imagePath + peliculas[i].poster_path;
             //console.log(cover);
             movies.push(movie);
             covers.push(cover);
@@ -41,10 +40,11 @@ function moviesSelection(id, div) {
         div.appendChild(movieDiv);
         movieDiv.appendChild(movieTitle);
         movieDiv.appendChild(movieCover);
+        movieDiv.classList.add('movie-div')
        
         movieTitle.textContent = moviesSelected[i];
         movieCover.src = moviesCovers[i];
-        movieCover.alt = 'Portada de la película "' + moviesSelected[i] + '"';
+        movieCover.alt = `Portada de la película ${moviesSelected[i]}`;
         //console.log(movieCover.alt)
     }
 }

@@ -33,16 +33,22 @@ h2 {
 }
 
 
-.genero div {
+.movie-div {
+  width: 200px;
   margin: 20px;
-  padding: 20px 30px 40px;
+  padding: 10px 20px 20px;
   background-color: rgb(218, 55, 55);
   border-radius: 10px;
   text-align: center;
 }
 
+.movie-div:hover {
+  transform: scale(1.1);
+  box-shadow: 4px 4px rgba(29, 1, 1, 0.2); 
+}
+
 img {
-  width: 300px;
+  width: 100%;
   gap: 80px;
   border-radius: 5px;
   
@@ -50,7 +56,6 @@ img {
 
 p {
   text-align: center;
-  overflow: auto;
   font-size: 15px;
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.651);
